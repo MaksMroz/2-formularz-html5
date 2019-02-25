@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+input {
+    width: 310px;
+}
+
+h1, h2 {
+    margin-left: 10px;
+}
+
+h1 {
+    color: firebrick;
+    margin-top: 10px;
+}
+
+h2 {
+    color: tomato;
+    font-style: italic;
+}
+
+section {
+    border: 1px solid black;
+    width: 50%;
+    padding: 30px;
+    margin: 10px;
+    position: relative;
+}
+
+section::before {
+    content: '';
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: -9.5px;
+    left: 15px;
+    padding-left: 5px;
+}
+
+.customer-info::before {
+    content: 'Customer Info';
+    width: 98px;
+}
+
+.books::before {
+    content: 'Books';
+    width: 47px;
+}
+
+section > select[name="books"] {
+    margin-left: 30px;
+    width: 260px;
+}
+
+input[name="number-of-books"], input[value="Submit"] {
+    width: 150px;
+}
+
+input[value="Submit"] {
+    margin-left: 10px;
+}

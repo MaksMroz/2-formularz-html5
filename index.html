@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2-formularz-html5</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>A Simple Form</h1>
+    <h2>Form Foundamentals</h2>
+    <form action="https://formspree.io/mrozmaksymilian@gmail.com" method="POST" autocomplete="on">
+        <section class="customer-info">
+            <!--Walidator mówi, że powinienem wstawić do sekcji headingi, ale żaden mi tu nie pasuje, a jako nagłówków dla sekcji użyłem ::before, więc po prostu nie wstawiam :) -->
+            <label>
+                <span>Name:</span> 
+                <input type="text" name="Name" autofocus placeholder="Enter your name" required>
+            </label>
+            <label>
+                <span>Telephone:</span> 
+                <input type="text" name="Telephone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Pattern: 1-234-567-8910" required>
+            </label>
+            <label>
+                <span>Email address:</span> 
+                <input type="email" name="Email" placeholder="Enter your email address" multiple required>
+            </label>
+        </section>
+        <section class="books">
+            <!--Walidator mówi, że powinienem wstawić do sekcji headingi, ale żaden mi tu nie pasuje, a jako nagłówków dla sekcji użyłem ::before, więc po prostu nie wstawiam :) -->
+            <select name="books">
+                <option value="ksiazka1">Książka 1</option>
+                <option value="ksiazka2">Książka 2</option>
+                <option value="ksiazka3">Książka 3</option>
+                <option value="ksiazka4">Książka 4</option>
+                <option value="ksiazka5">Książka 5</option>
+            </select>
+            <span>Quantity (Maximum 5):</span> 
+            <input type="number" name="number-of-books" min="1" max="5">
+        </section>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
